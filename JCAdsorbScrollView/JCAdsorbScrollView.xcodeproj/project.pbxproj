@@ -1,0 +1,477 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07EFE3221A19CABB00B8154C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EFE3211A19CABB00B8154C /* main.m */; };
+		07EFE3251A19CABB00B8154C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EFE3241A19CABB00B8154C /* AppDelegate.m */; };
+		07EFE3281A19CABB00B8154C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EFE3271A19CABB00B8154C /* ViewController.m */; };
+		07EFE32B1A19CABB00B8154C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07EFE3291A19CABB00B8154C /* Main.storyboard */; };
+		07EFE32D1A19CABB00B8154C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07EFE32C1A19CABB00B8154C /* Images.xcassets */; };
+		07EFE3301A19CABB00B8154C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07EFE32E1A19CABB00B8154C /* LaunchScreen.xib */; };
+		07EFE33C1A19CABB00B8154C /* JCAdsorbScrollViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EFE33B1A19CABB00B8154C /* JCAdsorbScrollViewTests.m */; };
+		07EFE34E1A19CB2600B8154C /* JCLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EFE3471A19CB2600B8154C /* JCLineChartView.m */; };
+		07EFE34F1A19CB2600B8154C /* JCLineData.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EFE3491A19CB2600B8154C /* JCLineData.m */; };
+		07EFE3501A19CB2600B8154C /* JCLinePointData.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EFE34B1A19CB2600B8154C /* JCLinePointData.m */; };
+		07EFE3511A19CB2600B8154C /* UIBezierPath+curved.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EFE34D1A19CB2600B8154C /* UIBezierPath+curved.m */; };
+		07F23F501A19EECD006D7953 /* JCAdsorbScrollViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F23F4F1A19EECD006D7953 /* JCAdsorbScrollViewHelper.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		07EFE3361A19CABB00B8154C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07EFE3141A19CABB00B8154C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07EFE31B1A19CABB00B8154C;
+			remoteInfo = JCAdsorbScrollView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07EFE31C1A19CABB00B8154C /* JCAdsorbScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JCAdsorbScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07EFE3201A19CABB00B8154C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07EFE3211A19CABB00B8154C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		07EFE3231A19CABB00B8154C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		07EFE3241A19CABB00B8154C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		07EFE3261A19CABB00B8154C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		07EFE3271A19CABB00B8154C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		07EFE32A1A19CABB00B8154C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		07EFE32C1A19CABB00B8154C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		07EFE32F1A19CABB00B8154C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		07EFE3351A19CABB00B8154C /* JCAdsorbScrollViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JCAdsorbScrollViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		07EFE33A1A19CABB00B8154C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07EFE33B1A19CABB00B8154C /* JCAdsorbScrollViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JCAdsorbScrollViewTests.m; sourceTree = "<group>"; };
+		07EFE3461A19CB2600B8154C /* JCLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCLineChartView.h; sourceTree = "<group>"; };
+		07EFE3471A19CB2600B8154C /* JCLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCLineChartView.m; sourceTree = "<group>"; };
+		07EFE3481A19CB2600B8154C /* JCLineData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCLineData.h; sourceTree = "<group>"; };
+		07EFE3491A19CB2600B8154C /* JCLineData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCLineData.m; sourceTree = "<group>"; };
+		07EFE34A1A19CB2600B8154C /* JCLinePointData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCLinePointData.h; sourceTree = "<group>"; };
+		07EFE34B1A19CB2600B8154C /* JCLinePointData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCLinePointData.m; sourceTree = "<group>"; };
+		07EFE34C1A19CB2600B8154C /* UIBezierPath+curved.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+curved.h"; sourceTree = "<group>"; };
+		07EFE34D1A19CB2600B8154C /* UIBezierPath+curved.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+curved.m"; sourceTree = "<group>"; };
+		07EFE3521A19CB9700B8154C /* JCAdsorbScrollView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JCAdsorbScrollView-Prefix.pch"; sourceTree = "<group>"; };
+		07F23F4E1A19EECD006D7953 /* JCAdsorbScrollViewHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCAdsorbScrollViewHelper.h; sourceTree = "<group>"; };
+		07F23F4F1A19EECD006D7953 /* JCAdsorbScrollViewHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCAdsorbScrollViewHelper.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07EFE3191A19CABB00B8154C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07EFE3321A19CABB00B8154C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07EFE3131A19CABB00B8154C = {
+			isa = PBXGroup;
+			children = (
+				07EFE31E1A19CABB00B8154C /* JCAdsorbScrollView */,
+				07EFE3381A19CABB00B8154C /* JCAdsorbScrollViewTests */,
+				07EFE31D1A19CABB00B8154C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		07EFE31D1A19CABB00B8154C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07EFE31C1A19CABB00B8154C /* JCAdsorbScrollView.app */,
+				07EFE3351A19CABB00B8154C /* JCAdsorbScrollViewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		07EFE31E1A19CABB00B8154C /* JCAdsorbScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				07EFE3451A19CB2600B8154C /* JCLineChartViewClasses */,
+				07EFE3231A19CABB00B8154C /* AppDelegate.h */,
+				07EFE3241A19CABB00B8154C /* AppDelegate.m */,
+				07EFE3261A19CABB00B8154C /* ViewController.h */,
+				07EFE3271A19CABB00B8154C /* ViewController.m */,
+				07F23F4E1A19EECD006D7953 /* JCAdsorbScrollViewHelper.h */,
+				07F23F4F1A19EECD006D7953 /* JCAdsorbScrollViewHelper.m */,
+				07EFE3291A19CABB00B8154C /* Main.storyboard */,
+				07EFE32C1A19CABB00B8154C /* Images.xcassets */,
+				07EFE32E1A19CABB00B8154C /* LaunchScreen.xib */,
+				07EFE31F1A19CABB00B8154C /* Supporting Files */,
+			);
+			path = JCAdsorbScrollView;
+			sourceTree = "<group>";
+		};
+		07EFE31F1A19CABB00B8154C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07EFE3201A19CABB00B8154C /* Info.plist */,
+				07EFE3211A19CABB00B8154C /* main.m */,
+				07EFE3521A19CB9700B8154C /* JCAdsorbScrollView-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		07EFE3381A19CABB00B8154C /* JCAdsorbScrollViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				07EFE33B1A19CABB00B8154C /* JCAdsorbScrollViewTests.m */,
+				07EFE3391A19CABB00B8154C /* Supporting Files */,
+			);
+			path = JCAdsorbScrollViewTests;
+			sourceTree = "<group>";
+		};
+		07EFE3391A19CABB00B8154C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07EFE33A1A19CABB00B8154C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		07EFE3451A19CB2600B8154C /* JCLineChartViewClasses */ = {
+			isa = PBXGroup;
+			children = (
+				07EFE3461A19CB2600B8154C /* JCLineChartView.h */,
+				07EFE3471A19CB2600B8154C /* JCLineChartView.m */,
+				07EFE3481A19CB2600B8154C /* JCLineData.h */,
+				07EFE3491A19CB2600B8154C /* JCLineData.m */,
+				07EFE34A1A19CB2600B8154C /* JCLinePointData.h */,
+				07EFE34B1A19CB2600B8154C /* JCLinePointData.m */,
+				07EFE34C1A19CB2600B8154C /* UIBezierPath+curved.h */,
+				07EFE34D1A19CB2600B8154C /* UIBezierPath+curved.m */,
+			);
+			path = JCLineChartViewClasses;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		07EFE31B1A19CABB00B8154C /* JCAdsorbScrollView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07EFE33F1A19CABB00B8154C /* Build configuration list for PBXNativeTarget "JCAdsorbScrollView" */;
+			buildPhases = (
+				07EFE3181A19CABB00B8154C /* Sources */,
+				07EFE3191A19CABB00B8154C /* Frameworks */,
+				07EFE31A1A19CABB00B8154C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JCAdsorbScrollView;
+			productName = JCAdsorbScrollView;
+			productReference = 07EFE31C1A19CABB00B8154C /* JCAdsorbScrollView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		07EFE3341A19CABB00B8154C /* JCAdsorbScrollViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07EFE3421A19CABB00B8154C /* Build configuration list for PBXNativeTarget "JCAdsorbScrollViewTests" */;
+			buildPhases = (
+				07EFE3311A19CABB00B8154C /* Sources */,
+				07EFE3321A19CABB00B8154C /* Frameworks */,
+				07EFE3331A19CABB00B8154C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07EFE3371A19CABB00B8154C /* PBXTargetDependency */,
+			);
+			name = JCAdsorbScrollViewTests;
+			productName = JCAdsorbScrollViewTests;
+			productReference = 07EFE3351A19CABB00B8154C /* JCAdsorbScrollViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		07EFE3141A19CABB00B8154C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = JimpleChen;
+				TargetAttributes = {
+					07EFE31B1A19CABB00B8154C = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					07EFE3341A19CABB00B8154C = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 07EFE31B1A19CABB00B8154C;
+					};
+				};
+			};
+			buildConfigurationList = 07EFE3171A19CABB00B8154C /* Build configuration list for PBXProject "JCAdsorbScrollView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 07EFE3131A19CABB00B8154C;
+			productRefGroup = 07EFE31D1A19CABB00B8154C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				07EFE31B1A19CABB00B8154C /* JCAdsorbScrollView */,
+				07EFE3341A19CABB00B8154C /* JCAdsorbScrollViewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		07EFE31A1A19CABB00B8154C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07EFE32B1A19CABB00B8154C /* Main.storyboard in Resources */,
+				07EFE3301A19CABB00B8154C /* LaunchScreen.xib in Resources */,
+				07EFE32D1A19CABB00B8154C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07EFE3331A19CABB00B8154C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07EFE3181A19CABB00B8154C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07EFE34F1A19CB2600B8154C /* JCLineData.m in Sources */,
+				07EFE3511A19CB2600B8154C /* UIBezierPath+curved.m in Sources */,
+				07EFE3281A19CABB00B8154C /* ViewController.m in Sources */,
+				07EFE3251A19CABB00B8154C /* AppDelegate.m in Sources */,
+				07EFE34E1A19CB2600B8154C /* JCLineChartView.m in Sources */,
+				07EFE3221A19CABB00B8154C /* main.m in Sources */,
+				07EFE3501A19CB2600B8154C /* JCLinePointData.m in Sources */,
+				07F23F501A19EECD006D7953 /* JCAdsorbScrollViewHelper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07EFE3311A19CABB00B8154C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07EFE33C1A19CABB00B8154C /* JCAdsorbScrollViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		07EFE3371A19CABB00B8154C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07EFE31B1A19CABB00B8154C /* JCAdsorbScrollView */;
+			targetProxy = 07EFE3361A19CABB00B8154C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		07EFE3291A19CABB00B8154C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07EFE32A1A19CABB00B8154C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		07EFE32E1A19CABB00B8154C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07EFE32F1A19CABB00B8154C /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		07EFE33D1A19CABB00B8154C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		07EFE33E1A19CABB00B8154C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		07EFE3401A19CABB00B8154C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jinhong Chen (FJ537TNQ9F)";
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PREFIX_HEADER = "JCAdsorbScrollView/JCAdsorbScrollView-Prefix.pch";
+				INFOPLIST_FILE = JCAdsorbScrollView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "e3f41870-4487-4aa9-8b24-e8afb96c15fa";
+			};
+			name = Debug;
+		};
+		07EFE3411A19CABB00B8154C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jinhong Chen (FJ537TNQ9F)";
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PREFIX_HEADER = "JCAdsorbScrollView/JCAdsorbScrollView-Prefix.pch";
+				INFOPLIST_FILE = JCAdsorbScrollView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "e3f41870-4487-4aa9-8b24-e8afb96c15fa";
+			};
+			name = Release;
+		};
+		07EFE3431A19CABB00B8154C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = JCAdsorbScrollViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JCAdsorbScrollView.app/JCAdsorbScrollView";
+			};
+			name = Debug;
+		};
+		07EFE3441A19CABB00B8154C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = JCAdsorbScrollViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JCAdsorbScrollView.app/JCAdsorbScrollView";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07EFE3171A19CABB00B8154C /* Build configuration list for PBXProject "JCAdsorbScrollView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07EFE33D1A19CABB00B8154C /* Debug */,
+				07EFE33E1A19CABB00B8154C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07EFE33F1A19CABB00B8154C /* Build configuration list for PBXNativeTarget "JCAdsorbScrollView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07EFE3401A19CABB00B8154C /* Debug */,
+				07EFE3411A19CABB00B8154C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07EFE3421A19CABB00B8154C /* Build configuration list for PBXNativeTarget "JCAdsorbScrollViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07EFE3431A19CABB00B8154C /* Debug */,
+				07EFE3441A19CABB00B8154C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 07EFE3141A19CABB00B8154C /* Project object */;
+}
