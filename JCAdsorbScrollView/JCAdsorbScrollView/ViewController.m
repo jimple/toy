@@ -70,7 +70,43 @@
     [_chartView showLines:@[lineData] withChartBound:_chartView.bounds];
 
     
-    
+//    // autolayout
+//    _chartView.translatesAutoresizingMaskIntoConstraints = NO;
+//    
+//    [self.scrlView addConstraints:@[
+//                                [NSLayoutConstraint constraintWithItem:_chartView
+//                                                             attribute:NSLayoutAttributeLeft
+//                                                             relatedBy:NSLayoutRelationEqual
+//                                                                toItem:self.scrlView
+//                                                             attribute:NSLayoutAttributeLeft
+//                                                            multiplier:1.0
+//                                                              constant:0],
+//                                
+//                                [NSLayoutConstraint constraintWithItem:_chartView
+//                                                             attribute:NSLayoutAttributeTop
+//                                                             relatedBy:NSLayoutRelationEqual
+//                                                                toItem:self.scrlView
+//                                                             attribute:NSLayoutAttributeTop
+//                                                            multiplier:1
+//                                                              constant:0],
+//                                ]];
+//    [_chartView addConstraints:@[
+//                                 [NSLayoutConstraint constraintWithItem:_chartView
+//                                                              attribute:NSLayoutAttributeHeight
+//                                                              relatedBy:NSLayoutRelationEqual
+//                                                                 toItem:nil
+//                                                              attribute:NSLayoutAttributeNotAnAttribute
+//                                                             multiplier:1
+//                                                               constant:_chartView.bounds.size.height],
+//                                 
+//                                 [NSLayoutConstraint constraintWithItem:_chartView
+//                                                              attribute:NSLayoutAttributeWidth
+//                                                              relatedBy:NSLayoutRelationEqual
+//                                                                 toItem:nil
+//                                                              attribute:NSLayoutAttributeNotAnAttribute
+//                                                             multiplier:1
+//                                                               constant:_chartView.bounds.size.width],
+//                                 ]];
     
     
     
@@ -78,7 +114,13 @@
     // 创建helper。输入曲线x坐标数组，刻度线相对于scroll view左侧的位置。
     // scroll view的委托里调用helper的接口即可。
     self.scrlView.decelerationRate = 0.0f;
-    _adsorbScrlViewHelper = [[JCAdsorbScrollViewHelper alloc] initWithXValues:xValue cursorXOffset:[[UIScreen mainScreen] bounds].size.width/2.0f];
+    _adsorbScrlViewHelper = [[JCAdsorbScrollViewHelper alloc] initWithXValues:xValue
+                                                                cursorXOffset:[[UIScreen mainScreen] bounds].size.width/2.0f
+                                                  isAdsorbToDirectionOfMotion:NO];
+    _adsorbScrlViewHelper.adsorbToPointHandler = ^(NSInteger indexOfXValueArray, CGFloat scrolContentOffsetX, CGFloat adsorbPointX)
+    {
+        NSLog(@"\n\n=======\n吸附点在数组中的序号：%ld  滚动x轴位移：%f  吸附位置：%f\n\n", (long)indexOfXValueArray, scrolContentOffsetX, adsorbPointX);
+    };
 
 }
 

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B17" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -33,15 +34,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="zEE-RY-S3i" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="All-lT-2Vq"/>
-                            <constraint firstAttribute="trailing" secondItem="zEE-RY-S3i" secondAttribute="trailing" id="D06-cW-9cB"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="iui-0T-pcW" secondAttribute="bottom" id="Ko6-Cl-gkQ"/>
                             <constraint firstItem="iui-0T-pcW" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="Lo8-B7-MnC"/>
                             <constraint firstAttribute="centerX" secondItem="iui-0T-pcW" secondAttribute="centerX" id="Lzf-rF-Vhx"/>
+                            <constraint firstItem="zEE-RY-S3i" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="OyF-mW-0Y2"/>
                             <constraint firstAttribute="centerY" secondItem="iui-0T-pcW" secondAttribute="centerY" id="bEr-Ns-m2B"/>
                             <constraint firstAttribute="centerY" secondItem="zEE-RY-S3i" secondAttribute="centerY" id="iN7-qa-v9v"/>
                             <constraint firstAttribute="centerX" secondItem="zEE-RY-S3i" secondAttribute="centerX" id="jCJ-X8-PNo"/>
+                            <constraint firstAttribute="bottom" secondItem="iui-0T-pcW" secondAttribute="bottom" id="sGk-dg-qqn"/>
+                            <constraint firstAttribute="trailing" secondItem="zEE-RY-S3i" secondAttribute="trailing" id="u0D-WD-mJ6"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="bEr-Ns-m2B"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="scrlView" destination="zEE-RY-S3i" id="tE6-8L-uHZ"/>
