@@ -116,7 +116,7 @@
     self.scrlView.decelerationRate = 0.0f;
     _adsorbScrlViewHelper = [[JCAdsorbScrollViewHelper alloc] initWithXValues:xValue
                                                                 cursorXOffset:[[UIScreen mainScreen] bounds].size.width/2.0f
-                                                  isAdsorbToDirectionOfMotion:NO];
+                                                  isAdsorbToDirectionOfMotion:YES];
     _adsorbScrlViewHelper.adsorbToPointHandler = ^(NSInteger indexOfXValueArray, CGFloat scrolContentOffsetX, CGFloat adsorbPointX)
     {
         NSLog(@"\n\n=======\n吸附点在数组中的序号：%ld  滚动x轴位移：%f  吸附位置：%f\n\n", (long)indexOfXValueArray, scrolContentOffsetX, adsorbPointX);
