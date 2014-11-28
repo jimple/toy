@@ -18,27 +18,31 @@ typedef NS_ENUM(NSInteger, EJCAbsorbType)
 @interface JCAdsorbScrollViewHelper ()
 
 @property (nonatomic, strong) NSArray *xValueArray;
-@property (nonatomic, assign) CGFloat cursorXOffset;
 @property (nonatomic, assign) BOOL scrlToOriginPoint;
 @property (nonatomic, assign) CGFloat lastXOffset;
 @property (nonatomic, assign) EJCAbsorbType absorbToPointType;
+@property (nonatomic, assign) BOOL isAdsorbAnimation;
+@property (nonatomic, assign) BOOL canScrlAwayBorder;       // 滚动超过边界后是否可继续向前进方向滚动
+@property (nonatomic, assign) CGFloat deltaDistanceToAdsorbForScrlAwayBorder;
 
 @end
 
 @implementation JCAdsorbScrollViewHelper
 
 - (instancetype)initWithXValues:(NSArray *)xValueArray
-                  cursorXOffset:(CGFloat)cursorXOffset
     isAdsorbToDirectionOfMotion:(BOOL)adsorbToDirecOfMotion
+              isAdsorbAnimation:(BOOL)isAdsorbAnimation
 {
     self = [super init];
     if (self)
     {
         _xValueArray = [NSArray arrayWithArray:xValueArray];
-        _cursorXOffset = cursorXOffset;
+        _isAdsorbAnimation = isAdsorbAnimation;
         
         _scrlToOriginPoint = YES;
         _lastXOffset = 0.0f;
+        _canScrlAwayBorder = YES;
+        _deltaDistanceToAdsorbForScrlAwayBorder = 20.0f;
         
         _absorbToPointType = adsorbToDirecOfMotion ? kEJCAbsorbTypePointInDirectionOfMotion : kEJCAbsorbTypeNearbyPoint;
     }else{}
@@ -48,6 +52,16 @@ typedef NS_ENUM(NSInteger, EJCAbsorbType)
 - (void)dealloc
 {
     
+}
+
+- (void)changeDeltaDistanceToAdsorbForScrlAwayBorder:(CGFloat)delta
+{
+    _deltaDistanceToAdsorbForScrlAwayBorder = fabsf(delta);
+}
+
+- (void)changeCanScrlAwayBorderState:(BOOL)canScrlAway
+{
+    _canScrlAwayBorder = canScrlAway;
 }
 
 #pragma mark - UIScrollView
@@ -84,17 +98,23 @@ typedef NS_ENUM(NSInteger, EJCAbsorbType)
         NSInteger indexOfXValueArray = -1;
         CGFloat adsorbPointX = -1;
         
+        CGFloat cursorXOffset = 0.0f;
+        if (self.getCursorXOffsetHandler)
+        {
+            cursorXOffset = self.getCursorXOffsetHandler();
+        }else{}
+        
         NSArray *retArr;
         switch (_absorbToPointType)
         {
             case kEJCAbsorbTypeNearbyPoint:
             {
-                retArr = [self nearbyXValueWithSrcX:(scrollView.contentOffset.x + _cursorXOffset)];
+                retArr = [self nearbyXValueWithSrcX:(scrollView.contentOffset.x + cursorXOffset)];
             }
                 break;
             case kEJCAbsorbTypePointInDirectionOfMotion:
             {
-                retArr = [self nearbyXValueWithSrcX:(scrollView.contentOffset.x + _cursorXOffset)
+                retArr = [self nearbyXValueWithSrcX:(scrollView.contentOffset.x + cursorXOffset)
                                  directionOfMontion:scrlToOriginPoint];
             }
                 break;
@@ -107,12 +127,20 @@ typedef NS_ENUM(NSInteger, EJCAbsorbType)
             adsorbPointX = ((NSNumber *)retArr[0]).floatValue;
             indexOfXValueArray = ((NSNumber *)retArr[1]).integerValue;
             
-            pt.x = adsorbPointX - _cursorXOffset;
-            [scrollView setContentOffset:pt animated:NO];
-            
-            if (self.adsorbToPointHandler)
+            if (indexOfXValueArray >= 0)
             {
-                self.adsorbToPointHandler(indexOfXValueArray, pt.x, adsorbPointX);
+                pt.x = adsorbPointX - cursorXOffset;
+                BOOL isScrlToOffset = NO;
+                if (pt.x >= 0)  // < 0 的不移动
+                {
+                    [scrollView setContentOffset:pt animated:_isAdsorbAnimation];
+                    isScrlToOffset = YES;
+                }else{}
+                
+                if (self.adsorbToPointHandler)
+                {
+                    self.adsorbToPointHandler(indexOfXValueArray, pt.x, adsorbPointX, isScrlToOffset);
+                }else{}
             }else{}
         }else{/* ! assert */}
     });
@@ -211,6 +239,27 @@ typedef NS_ENUM(NSInteger, EJCAbsorbType)
         }
         
         retX = lastX;
+        
+        if (_canScrlAwayBorder)
+        {
+            // 超过边界一定距离后不自动吸附
+            if (retIndex == 0)
+            {
+                if ((retX - srcX) > _deltaDistanceToAdsorbForScrlAwayBorder)
+                {
+                    retX = srcX;
+                    retIndex = -1;
+                }else{}
+            }
+            else if (retIndex == (_xValueArray.count - 1))
+            {
+                if ((srcX - retX) > _deltaDistanceToAdsorbForScrlAwayBorder)
+                {
+                    retX = srcX;
+                    retIndex = -1;
+                }else{}
+            }else{}
+        }else{}
     }else{}
     
     return @[@(retX), @(retIndex)];

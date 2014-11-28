@@ -50,6 +50,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="cursorLine" destination="iui-0T-pcW" id="CAC-8T-VXH"/>
                         <outlet property="scrlView" destination="zEE-RY-S3i" id="tE6-8L-uHZ"/>
                     </connections>
                 </viewController>
