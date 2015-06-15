@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>997FAD71-F0A1-4549-ADC4-5F1846C67B0F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ImageAnimtaion</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>95E2E8E72839574355D13718B4BCDDE7FFEB0BA7</key>
+		<string>https://github.com/jimple/toy.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ImageAnimtaion/ImageAnimtaion.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>95E2E8E72839574355D13718B4BCDDE7FFEB0BA7</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jimple/toy.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>95E2E8E72839574355D13718B4BCDDE7FFEB0BA7</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>95E2E8E72839574355D13718B4BCDDE7FFEB0BA7</string>
+			<key>IDESourceControlWCCName</key>
+			<string>toy</string>
+		</dict>
+	</array>
+</dict>
+</plist>
